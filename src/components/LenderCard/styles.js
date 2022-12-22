@@ -1,26 +1,23 @@
 export const styles = {
     cards:{
-        wrapper: {
+        header: {
             boxSizing: 'border-box',
             position: 'relative',
             width: '432px',
-            height: '229px',
+            padding: '18px 25px 16px',
             background: '#FFFFFF',
             border: '2.25px solid #868686',
             borderBottom: '3px solid #868686',
             boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
             borderRadius: '12px',
-            marginLeft: '20px',
             zIndex: 'auto',
         },
-        secondCard: {
+        footer: {
           boxSizing: 'border-box',
           position: 'relative',
           width: '432px',
-          height: '380px', 
-          left: '-2px',
-          top: '10px',
-          padding: '25px',
+          marginTop: '-32px',
+          padding: '105px 25px 44px',
           paddingTop: '70px',
           background: '#FFFFFF',
           border: '2.25px solid #C8C6C6',
@@ -28,11 +25,9 @@ export const styles = {
           zIndex: -1
         },
         benefitCard: {
-          position: 'absolute',
           width: '311px',
           height: '27px',
-          left: '25px',
-          top: '220px',
+          marginTop: '20px',
           background: '#ECEAF2',
           borderRadius: '24px',
           color: '#7B5BE4',
@@ -43,29 +38,25 @@ export const styles = {
         }
     },
     divider: {
-      position: 'absolute',
-      width: '430px',
-      left: '0px',
-      top: '178px',
-      borderTop: '3px solid #868686',
-      borderRadius: '0px 0px 12px 12px'
+      width: 'calc(100% + 50px)',
+      marginTop: '23px',
+      marginLeft: '-25px',
+      borderBottom: '2px solid #868686',
+      marginBottom: '15px'
     },
     badges:{
       generic: {
-        width: '121px',
-        height: '24px',
+        position: 'absolute',
+        padding: '0 32px',
+        right: '25px',
+        top: '-15px',
         borderRadius: '6px',
-        justifyContent: 'center',
-        alignItems: 'center',
         textTransform: 'none',
         fontStyle: 'normal',
         fontWeight: 600,
         fontSize: '14px',
-        lineHeight: '20px',
-        display: 'flex',
-        flex: 'none',
-        order: 0,
-        flexGrow: 0
+        lineHeight: '24px',
+        display: 'block',
       },
       default:{
         background: '#7B5BE4',
@@ -77,56 +68,52 @@ export const styles = {
       },
     },
     texts: {
+        colors: {
+            black: { 
+                color: '#000000',
+            },
+            purple: {
+                color: '#7B5BE4',
+            }
+        },
         mainTitle: {
-            left: '25px',
-            top: '18px',
-            fontStyle: 'normal',
             fontWeight: 700,
             lineHeight: '33px',
-            color: '#000000'
+            marginBottom: '7px',
         },
-        secondTitle: {
-          left: '25px',
-          top: '105px',
-          fontStyle: 'normal',
-          fontWeight: 700,
-          lineHeight: '20px',
-          color: '#000000',
-          fontSize: '20px'
-      },
-        firstSubtitleText: {
-          fontStyle: 'normal',
+        subtitle: {
           fontWeight: 600,
           fontSize: '16px',
           lineHeight: '22px',
           color: '#000000'
         },
-        secondSubtitleText: {
-          fontStyle: 'normal',
+        fundedText: {
           fontWeight: 600,
           fontSize: '14px',
           lineHeight: '19.07px',
           color: '#000000'
         },
-        rangeAmountText: {
-          position: 'absolute',
-          width: '383px',
-          height: '28px',
-          left: '25px',
-          top: '183px',
-          fontStyle: 'normal',
-          fontWeight: 700,
-          fontSize: '22px',
-          lineHeight: '30px',
-          color: '#7B5BE4'
+        range:{
+            amount: {
+                fontWeight: 700,
+                fontSize: '22px',
+                lineHeight: '30px',
+            }
         },
-        regularText:{
-          position: 'absolute',
-          fontStyle: 'normal',
-          fontWeight: 400,
-          fontSize: '16px',
-          lineHeight: '22px',
-          color: '#000000'
+        about: {
+            title: {
+                fontWeight: 700,
+                lineHeight: '20px',
+                fontSize: '20px'
+            },
+            description: {
+                fontWeight: 400,
+                fontSize: '16px',
+                lineHeight: '22px',
+                color: '#000000', 
+                marginTop: '22px',
+                marginBottom: '20px',
+            }
         },
     }
 }

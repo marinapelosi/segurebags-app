@@ -4,16 +4,9 @@ const Button = defineStyleConfig({
   baseStyle: {
     fontWeight: 'bold',
     borderRadius: '6px',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '10px 12px',
-    gap: '8px',
-    position: 'absolute',
-    width: '130px',
-    height: '32px',
-    right: '33px',
+    display: 'inline-block',
+    fontSize: '16px',
+    lineHeight: '20px',
     color: '#FFFFFF'
   },
   variants: {
