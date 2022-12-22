@@ -6,10 +6,8 @@ import {
     Badge,
     Text,
     Divider,
-    Button,
     useStyleConfig,
-    extendTheme,
-    defineStyleConfig
+    Button,
   } from '@chakra-ui/react';
 import { MapPinIcon } from '../OwnIcons/MapPinIcon';
 import ButtonCustom from '../Button'; // Trying to implement the button variant trick
@@ -148,55 +146,6 @@ export default function LenderCard(props) {
         }
     }
 
-    // Trying to implement the button variant trick
-    const ButtonCustom = defineStyleConfig({
-      baseStyle: {
-        fontWeight: 'bold',
-        borderRadius: '6px',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: '10px 12px',
-        gap: '8px',
-        position: 'absolute',
-        width: '130px',
-        height: '32px',
-        right: '33px',
-        top: '98px',
-      },
-      variants: {
-        bagsNormal: {
-            background: '#020202',
-        },
-        bagsDesktop: {
-            background: 'blue',
-        }
-      },
-      defaultProps: {
-        size: 'md',
-        variant: 'bagsNormal',
-      },
-    });
-
-    const theme = extendTheme({
-      components: {
-        ButtonCustom: {
-          variants: {
-            bagsNormal: {
-                background: '#020202',
-            },
-            bagsDesktop: {
-                background: 'blue',
-            }
-          }
-        }
-      },
-    })
-
-    const { variant } = props
-    const button = useStyleConfig('ButtonCustom', {variant});
-
     return (
       <Center p={2}>
         <Box
@@ -246,9 +195,9 @@ export default function LenderCard(props) {
                   </Text>
                 </Stack>
                 <Stack spacing={0} align={'right'}>
-                  {/* <Button __css={button}>Learn More</Button> 
-                  Trying to implement the variant screen size trick
-                  */}
+                  {/* <ButtonCustom variant={props.variant}>Learn More</ButtonCustom>  */}
+                  
+                 
                   <Button
                       w={'full'}
                       mt={-2}
@@ -259,7 +208,9 @@ export default function LenderCard(props) {
                       _hover={{
                         transform: 'translateY(-2px)',
                         boxShadow: 'lg',
-                      }}>
+                      }}
+                      // variant="bagsDesktop"
+                      >
                       Learn More
                   </Button>
                 </Stack>
