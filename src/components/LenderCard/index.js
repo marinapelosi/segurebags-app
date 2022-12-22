@@ -6,12 +6,9 @@ import {
     Badge,
     Text,
     Divider,
-    useStyleConfig,
     Button,
   } from '@chakra-ui/react';
 import { MapPinIcon } from '../OwnIcons/MapPinIcon';
-import ButtonCustom from '../Button'; // Trying to implement the button variant trick
- 
   
 export default function LenderCard(props) {
     const styles = {
@@ -195,22 +192,7 @@ export default function LenderCard(props) {
                   </Text>
                 </Stack>
                 <Stack spacing={0} align={'right'}>
-                  {/* <ButtonCustom variant={props.variant}>Learn More</ButtonCustom>  */}
-                  
-                 
-                  <Button
-                      w={'full'}
-                      mt={-2}
-                      ml={6}
-                      background={'black'}
-                      color={'white'}
-                      rounded={'md'}
-                      _hover={{
-                        transform: 'translateY(-2px)',
-                        boxShadow: 'lg',
-                      }}
-                      // variant="bagsDesktop"
-                      >
+                  <Button variant={props.variant}>
                       Learn More
                   </Button>
                 </Stack>

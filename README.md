@@ -5,6 +5,8 @@ In summary, a component was created that can be used in tons of contexts, passin
 ```<LenderCard />```
 
 
+
+
 ### To Run
 
 `npm install`

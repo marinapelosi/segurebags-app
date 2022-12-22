@@ -1,6 +1,6 @@
-import { Box,useStyleConfig, defineStyleConfig, extendTheme } from '@chakra-ui/react';
+import { defineStyleConfig, extendTheme } from '@chakra-ui/react';
 
-const ButtonCustom = defineStyleConfig({
+const Button = defineStyleConfig({
   baseStyle: {
     fontWeight: 'bold',
     borderRadius: '6px',
@@ -14,12 +14,11 @@ const ButtonCustom = defineStyleConfig({
     width: '130px',
     height: '32px',
     right: '33px',
-    top: '98px',
+    color: '#FFFFFF'
   },
   variants: {
     bagsNormal: {
         background: '#020202',
-        borderRadius: '6px'
     },
     bagsDesktop: {
         background: 'blue',
@@ -33,16 +32,8 @@ const ButtonCustom = defineStyleConfig({
 
 const theme = extendTheme({
   components: {
-    ButtonCustom,
+    Button,
   },
 })
 
-export const Button = (props) => {
-  const { variant, ...rest } = props
-
-  const styles = useStyleConfig('ButtomCustom', { variant })
-
-  return <Box __css={styles} {...rest} />
-}
-
-export default Button;
+export default theme;
