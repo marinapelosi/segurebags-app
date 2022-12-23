@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <ChakraProvider theme={theme}>
-    <Flex width={"100vw"} height={"70vh"} alignContent={"center"} justifyContent={"center"}>
+    <Flex width={"100vw"} height={"100vh"} alignContent={"center"} justifyContent={"center"}>
       <Center>
           <LenderCard 
             badge = {{
